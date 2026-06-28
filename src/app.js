@@ -8,6 +8,9 @@ app.use(express.json());
 
 app.use("/api/profile", profileRoutes);
 app.get("/", (req, res) => {
-  res.send("GitHub Profile API test");
+  res.json({
+    success: true,
+    message: "GitHub Profile Analyzer API is running"
+  });
 });
 export default app;
